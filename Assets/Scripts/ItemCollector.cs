@@ -5,15 +5,11 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    private int cherries = 0;
-
     [SerializeField] private Text cherriesText;
     [SerializeField] private AudioSource collectionSoundEffect;
 
     private void Start()
     {
-        // Lees het aantal verzamelde kersen uit PlayerPrefs voor het huidige level
-        cherries = PlayerPrefs.GetInt("Cherries", 0);
         UpdateCherriesText();
     }
 
@@ -23,19 +19,16 @@ public class ItemCollector : MonoBehaviour
         {
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
-            cherries++;
-            Debug.Log("Cherries: " + cherries);
 
-            // Sla het aantal verzamelde kersen op in PlayerPrefs voor het huidige level
-            PlayerPrefs.SetInt("Cherries", cherries);
-            PlayerPrefs.Save();
-
+            // Verzamel de kers en update de cherries in het GameManager
+            GameManager.Instance.CollectCherry();
+            GameManager.Instance.UpdateHighscore();
             UpdateCherriesText();
         }
     }
 
     private void UpdateCherriesText()
     {
-        cherriesText.text = "Cherries: " + cherries;
+        cherriesText.text = "Cherries: " + GameManager.Instance.GetCherriesCollected();
     }
 }
