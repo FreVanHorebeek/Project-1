@@ -40617,7 +40617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd8a2a1369fc4e4c948ff23eac59397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalFlags: 2
 --- !u!4 &1709194846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5717764109343757724, guid: 78342b0330665e0478b9b86f81f4b5f2, type: 3}
@@ -41077,10 +41076,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
-    - target: {fileID: 5254746397316028765, guid: 28366e32bfb5d7c4b92986fa95df9f81, type: 3}
-      propertyPath: m_TagString
-      value: Vlag 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8328222246598342038, guid: 28366e32bfb5d7c4b92986fa95df9f81, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -41184,10 +41179,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7889164800250416552, guid: 9f39d75f7b0e4844ca0fea9ecaefbea7, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7889164800250416552, guid: 9f39d75f7b0e4844ca0fea9ecaefbea7, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
