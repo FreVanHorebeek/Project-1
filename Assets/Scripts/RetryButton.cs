@@ -6,6 +6,6 @@ public class RetryButton : MonoBehaviour
     public void RestartGame()
     {
         
-        SceneManager.LoadScene("Start Screen"); 
+        SceneManager.LoadScene("Level 1"); 
     }
 }
